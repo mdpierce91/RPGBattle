@@ -1,10 +1,10 @@
 import React from 'react';
+import LoginPage from './LoginPage';
 
 const Home = () => {
     return (
         <div className="container home-container">
-            <h1>RPG Battle!</h1>
-            <p>This is a paragraph!</p>
+            <LoginPage/>
         </div>
     );
 }

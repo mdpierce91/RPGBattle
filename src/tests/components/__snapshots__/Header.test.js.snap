@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header correctly 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="content-container"
+  >
+    <div
+      className="header__content"
+    >
+      <Link
+        className="header__title"
+        to="/"
+      >
+        <h1>
+          RPG Battle!
+        </h1>
+      </Link>
+      <button
+        className="button button--link"
+      >
+        Settings
+      </button>
+      <button
+        className="button button--link button--logout"
+        onClick={[MockFunction]}
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</header>
+`;

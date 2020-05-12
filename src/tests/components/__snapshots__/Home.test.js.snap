@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render the home page 1`] = `ShallowWrapper {}`;
+exports[`Should render the home page 1`] = `
+<div
+  className="container home-container"
+>
+  <Connect(LoginPage) />
+</div>
+`;

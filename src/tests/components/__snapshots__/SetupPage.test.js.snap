@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render setup page 1`] = `
+<div>
+  <TeamBuilder />
+  <button>
+    Find Battle!
+  </button>
+</div>
+`;
