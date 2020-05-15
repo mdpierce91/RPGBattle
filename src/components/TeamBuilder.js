@@ -4,7 +4,6 @@ import UnitList from './UnitList';
 const TeamBuilder = () => {
     return (
         <div>
-            
             <UnitList />
             
         </div>

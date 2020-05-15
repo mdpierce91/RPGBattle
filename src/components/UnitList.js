@@ -1,18 +1,18 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { useContext } from 'react';
 import UnitListItem from './UnitListItem';
-import exampleUnits from '../tests/fixtures/units';
+import AppContext from '../context/app-context';
 
-export const UnitList = (props) => {
+export const UnitList = () => {
+    const {units, teamDispatch} = useContext(AppContext);
     return (
         <div>
             {
-                props.units.length === 0 ? (
+                units.length === 0 ? (
                     <div>
                         <span>No Units</span>
                     </div>
                 ) : (
-                    props.units.map((unit) => {
+                    units.map((unit) => {
                         return <UnitListItem key={unit.id} {...unit} />
                     })
                 )
@@ -21,10 +21,4 @@ export const UnitList = (props) => {
     )
 }
 
-const mapStateToProps = (state) => {
-	return {
-		units: exampleUnits
-	};
-};
-
-export default connect(mapStateToProps)(UnitList);
+export { UnitList as default };

@@ -3,8 +3,7 @@ import React from 'react';
 const UnitListItem = ({...unit}) => {
     return (
         <div>
-            <span>{unit.name}</span>
-            <span>{unit.id}</span>
+            <pre>{JSON.stringify(unit)}</pre>
         </div>
     );
 }
