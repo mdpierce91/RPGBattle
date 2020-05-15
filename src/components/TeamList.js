@@ -2,21 +2,20 @@ import React, { useContext } from 'react';
 import UnitListItem from './UnitListItem';
 import AppContext from '../context/app-context';
 
-export const UnitList = () => {
-    const{units} = useContext(AppContext);
-
+export const TeamList = () => {
+    const {team} = useContext(AppContext)
     return (
         <div>
             {
-                units.length === 0 ? (
+                team.length === 0 ? (
                     <div>
-                        <span>No Units</span>
+                        <span>No Units in team</span>
                     </div>
                 ) : (
-                    units.map((unit) => {
+                    team.map((unit) => {
                         // console.log(`What does unit look like:`, unit);
                         // console.log(`Unit id for key: ${unit.id}`);
-                        return <UnitListItem key={`unit-list-${unit.id}`} unit={unit}/>
+                        return <UnitListItem key={`team-list-${unit.id}`} unit={unit} />
                     })
                 )
             }
@@ -25,4 +24,4 @@ export const UnitList = () => {
 }
 
 
-export { UnitList as default };
+export { TeamList as default };

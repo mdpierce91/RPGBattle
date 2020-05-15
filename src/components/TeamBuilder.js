@@ -1,12 +1,14 @@
 import React from 'react';
 import UnitList from './UnitList';
+import TeamList from './TeamList';
 
 const TeamBuilder = () => {
     return (
         <div>
-            
-            <UnitList />
-            
+            {/* Show current Team */}
+            <TeamList/>
+            {/* Show available units */}
+            <UnitList/>
         </div>
     )
 }

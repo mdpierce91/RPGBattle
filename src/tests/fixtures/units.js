@@ -11,6 +11,8 @@ const units = [
         name: "first",
         physicalAttack: 5,
         physicalDefence: 8,
+        speciesId: 1,
+        speciesName: "ones",
         speed: 2,
         status: [],
         types: [ "1"]
@@ -25,6 +27,8 @@ const units = [
         name: "second",
         physicalAttack: 17,
         physicalDefence: 10,
+        speciesId: 2,
+        speciesName: "twos",
         speed: 7,
         status: [],
         types: [ "2"]
@@ -39,6 +43,8 @@ const units = [
         name: "third",
         physicalAttack: 12,
         physicalDefence: 22,
+        speciesId: 3,
+        speciesName: "threes",
         speed: 3,
         status: [ "badStatus"],
         types: [ "3" ]
