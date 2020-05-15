@@ -1,4 +1,4 @@
-import React, { useReducer} from 'react';
+import React, { useReducer, useEffect } from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import unitsReducer from '../reducers/units';
@@ -15,6 +15,23 @@ export const history = createBrowserHistory();
 const AppRouter = () => {
     const [units, unitsDispatch] = useReducer(unitsReducer, [])
     const [team, teamDispatch] = useReducer(teamReducer, [])
+
+    useEffect(() => {
+        console.log('localstorage -> units');
+        const unitsData = JSON.parse(localStorage.getItem('units'));
+
+        if (unitsData){
+            unitsDispatch({
+                type: 'POPULATE_UNITS',
+                units: unitsData
+            });
+        }
+    }, [])
+    useEffect(() => {
+        console.log('units -> localstorage');
+        localStorage.setItem('units', JSON.stringify(units));
+    }, [units])
+
     return (
         <AppContext.Provider value={{units, team, unitsDispatch, teamDispatch}}>
             <Router history={history}>

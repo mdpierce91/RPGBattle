@@ -3,10 +3,15 @@ const teamReducer = (state, action) => {
         case 'POPULATE_TEAM':    
             return action.team;
         case 'ADD_TO_TEAM':
-            return [
-                ...state,
-                action.unit
-            ];
+            if (state.filter((unit) => unit.id !== action.id) === state){
+                return [
+                    ...state,
+                    action.unit
+                ];
+            }
+            else{
+                return state;
+            }
         case 'REMOVE_FROM_TEAM':
             return state.filter((unit) => unit.id !== action.id);
         default:
