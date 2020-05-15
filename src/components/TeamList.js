@@ -1,30 +1,29 @@
-// import React from 'react';
-// import { connect } from 'react-redux';
-// import UnitListItem from './UnitListItem';
-// import exampleUnits from '../tests/fixtures/units';
+import React, { useContext } from 'react';
+import TeamListItem from './TeamListItem';
+import AppContext from '../context/app-context';
 
-// export const UnitList = (props) => {
-//     return (
-//         <div>
-//             {
-//                 props.units.length === 0 ? (
-//                     <div>
-//                         <span>No Units</span>
-//                     </div>
-//                 ) : (
-//                     props.units.map((unit) => {
-//                         return <UnitListItem key={unit.id} {...unit} />
-//                     })
-//                 )
-//             }
-//         </div>
-//     )
-// }
+export const TeamList = () => {
+    const {team} = useContext(AppContext);
+    return (
+        <div>
+            {
+                team.length === 0 ? (
+                    <div>
+                        <span>No Units in team</span>
+                    </div>
+                ) : (
+                    team.map((unit) => {
+                        return (
+                            <span key={`team-${unit.id}`}>
+                                <TeamListItem  {...unit} />
+                            </span>
 
-// const mapStateToProps = (state) => {
-// 	return {
-// 		units: exampleUnits
-// 	};
-// };
+                        )
+                    })
+                )
+            }
+        </div>
+    )
+}
 
-// export default connect(mapStateToProps)(UnitList);
+export { TeamList as default };

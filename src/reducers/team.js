@@ -8,7 +8,7 @@ const teamReducer = (state, action) => {
                 action.unit
             ];
         case 'REMOVE_FROM_TEAM':
-            return state.filter((unit) => unit.id === action.id);
+            return state.filter((unit) => unit.id !== action.id);
         default:
             return state;
     }

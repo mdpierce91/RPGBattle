@@ -3,7 +3,7 @@ import UnitListItem from './UnitListItem';
 import AppContext from '../context/app-context';
 
 export const UnitList = () => {
-    const {units, teamDispatch} = useContext(AppContext);
+    const {units} = useContext(AppContext);
     return (
         <div>
             {
@@ -13,7 +13,11 @@ export const UnitList = () => {
                     </div>
                 ) : (
                     units.map((unit) => {
-                        return <UnitListItem key={unit.id} {...unit} />
+                        return (
+                            <span key={unit.id}>
+                                <UnitListItem {...unit} />
+                            </span>
+                        )
                     })
                 )
             }
