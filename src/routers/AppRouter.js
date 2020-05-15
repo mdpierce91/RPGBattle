@@ -17,8 +17,9 @@ const AppRouter = () => {
     const [team, teamDispatch] = useReducer(teamReducer, [])
 
     useEffect(() => {
-        console.log('localstorage -> units');
+        console.log('localstorage -> units & team');
         const unitsData = JSON.parse(localStorage.getItem('units'));
+        const teamData = JSON.parse(localStorage.getItem('team'));
 
         if (unitsData){
             unitsDispatch({
@@ -26,11 +27,21 @@ const AppRouter = () => {
                 units: unitsData
             });
         }
+        if (teamData) {
+            teamDispatch({
+                type: 'POPULATE_TEAM',
+                team: teamData
+            });
+        }
     }, [])
     useEffect(() => {
         console.log('units -> localstorage');
         localStorage.setItem('units', JSON.stringify(units));
     }, [units])
+    useEffect(() => {
+        console.log('team -> localstorage');
+        localStorage.setItem('team', JSON.stringify(team));
+    }, [team])
 
     return (
         <AppContext.Provider value={{units, team, unitsDispatch, teamDispatch}}>

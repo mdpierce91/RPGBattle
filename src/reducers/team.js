@@ -3,7 +3,8 @@ const teamReducer = (state, action) => {
         case 'POPULATE_TEAM':    
             return action.team;
         case 'ADD_TO_TEAM':
-            if (state.filter((unit) => unit.id !== action.id) === state){
+            // If a unit of the same id isn't in the team, add it.
+            if (!state.some((unit) => unit.id === action.unit.id)){
                 return [
                     ...state,
                     action.unit
