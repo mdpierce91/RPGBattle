@@ -8,6 +8,8 @@ class Unit {
     name
     physicalAttack
     physicalDefence
+    speciesId
+    speciesName
     speed
     status
     types
@@ -27,6 +29,8 @@ class Unit {
             name,
             physicalAttack,
             physicalDefence,
+            speciesId,
+            speciesName,
             speed,
             status,
             types
@@ -40,6 +44,8 @@ class Unit {
         this.name = name;
         this.physicalAttack = physicalAttack;
         this.physicalDefence = physicalDefence;
+        this.speciesId = speciesId;
+        this.speciesName = speciesName;
         this.speed = speed;
         this.status = status;
         this.types = types;
