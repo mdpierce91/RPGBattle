@@ -6,6 +6,7 @@ export const UnitList = () => {
     const {units} = useContext(AppContext);
     return (
         <div className="list-container">
+            <h2>Available Units</h2>
             {
                 units.length === 0 ? (
                     <div className="list-item">

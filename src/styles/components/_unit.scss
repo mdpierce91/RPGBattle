@@ -1,0 +1,25 @@
+.unit-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.unit-stat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.unit-title {
+    display: flex;
+    flex-direction: row;
+    line-height: $l-size;
+}
+
+.unit-title h2 {
+    padding: 0;
+    margin: 0 $s-size 0 0;
+}
+
+.stat-label {
+    margin-right: $s-size;
+}

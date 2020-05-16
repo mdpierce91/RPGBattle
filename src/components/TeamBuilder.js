@@ -4,10 +4,12 @@ import TeamList from './TeamList';
 
 const TeamBuilder = () => {
     return (
-        <div className="team-builder">
+        <div>
             <h1 className="page-header">Build Your Team</h1>
-            <TeamList />
-            <UnitList />
+            <div className="list-comparator">
+                <TeamList />
+                <UnitList />
+            </div>
         </div>
     )
 }

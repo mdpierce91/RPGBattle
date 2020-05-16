@@ -6,6 +6,7 @@ export const TeamList = () => {
     const {team} = useContext(AppContext);
     return (
         <div className="list-container">
+            <h2>Team</h2>
             {
                 team.length === 0 ? (
                     <div className="list-item">
