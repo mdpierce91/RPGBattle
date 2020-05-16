@@ -5,20 +5,15 @@ import AppContext from '../context/app-context';
 export const TeamList = () => {
     const {team} = useContext(AppContext);
     return (
-        <div>
+        <div className="list-container">
             {
                 team.length === 0 ? (
-                    <div>
+                    <div className="list-item">
                         <span>No Units in team</span>
                     </div>
                 ) : (
                     team.map((unit) => {
-                        return (
-                            <span key={`team-${unit.id}`}>
-                                <TeamListItem  {...unit} />
-                            </span>
-
-                        )
+                        return <TeamListItem key={`team-${unit.id}`} {...unit} />;
                     })
                 )
             }

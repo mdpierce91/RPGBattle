@@ -5,19 +5,15 @@ import AppContext from '../context/app-context';
 export const UnitList = () => {
     const {units} = useContext(AppContext);
     return (
-        <div>
+        <div className="list-container">
             {
                 units.length === 0 ? (
-                    <div>
+                    <div className="list-item">
                         <span>No Units</span>
                     </div>
                 ) : (
                     units.map((unit) => {
-                        return (
-                            <span key={unit.id}>
-                                <UnitListItem {...unit} />
-                            </span>
-                        )
+                        return <UnitListItem key={unit.id} {...unit} />
                     })
                 )
             }

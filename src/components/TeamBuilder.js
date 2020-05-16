@@ -4,7 +4,8 @@ import TeamList from './TeamList';
 
 const TeamBuilder = () => {
     return (
-        <div>
+        <div className="team-builder">
+            <h1 className="page-header">Build Your Team</h1>
             <TeamList />
             <UnitList />
         </div>

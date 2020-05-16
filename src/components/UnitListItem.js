@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import AppContext from '../context/app-context';
+import UnitDisplay from './UnitDisplay';
 
 const UnitListItem = ({...unit}) => {
     const { teamDispatch } = useContext(AppContext);
@@ -12,9 +13,9 @@ const UnitListItem = ({...unit}) => {
         });
     }   
     return (
-        <div>
-            <pre>{JSON.stringify(unit)}</pre>
-            <button onClick={addToTeam}>Add To Team</button>
+        <div className="list-item" >
+            <UnitDisplay {...unit}/>
+            <button className="button" onClick={addToTeam}>Add To Team</button>
         </div>
     );
 }

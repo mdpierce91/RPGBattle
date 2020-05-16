@@ -21,7 +21,7 @@ const SetupPage = () => {
         });
     }
     return (
-        <div>
+        <div className="content-container">
             <TeamBuilder />
             <button>Find Battle!</button>
             <button onClick={createUnit}>Add a Random Unit</button>
