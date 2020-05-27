@@ -1,7 +1,6 @@
 <!-- ![Logo of the project](https://raw.githubusercontent.com/jehna/readme-best-practices/master/sample-logo.png) -->
 
-# Name of the project
-> RPG Battle
+# RPG Battle
 
 This is a browser based game based on the formula of Pokemon Stadium, allowing the player to build a team and battle against other teams.
 
