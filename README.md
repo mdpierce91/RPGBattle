@@ -4,6 +4,10 @@
 
 This is a browser based game based on the formula of Pokemon Stadium, allowing the player to build a team and battle against other teams.
 
+## Project Tracking
+
+Link to the [RPG Battle Trello Board](https://trello.com/b/XkWAmva3/rpg-battle-platform)
+
 ## Installing / Getting started
 
 A quick introduction of the minimal setup you need to get RPG Battle up &
@@ -32,6 +36,7 @@ Once npm and yarn are installed, the following command will install all the requ
 ```shell
 yarn install
 ```
+
 <!-- 
 ## Developing
 
