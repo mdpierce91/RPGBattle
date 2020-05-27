@@ -1,68 +1,92 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- ![Logo of the project](https://raw.githubusercontent.com/jehna/readme-best-practices/master/sample-logo.png) -->
 
-## Available Scripts
+# Name of the project
+> RPG Battle
 
-In the project directory, you can run:
+This is a browser based game based on the formula of Pokemon Stadium, allowing the player to build a team and battle against other teams.
 
-### `yarn start`
+## Installing / Getting started
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A quick introduction of the minimal setup you need to get RPG Battle up &
+running.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+```shell
+yarn start
+```
 
-### `yarn test`
+This will launch the webpack dev server, running the webpage on localhost:3000 by default.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Initial Configuration
 
-### `yarn build`
+In order to configure this project you will first need nodejs: https://nodejs.org/en/download/
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+And secondly yarn: https://classic.yarnpkg.com/en/docs/install/
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Yarn can be installed using npm with the following command
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```shell
+npm install yarn
+```
 
-### `yarn eject`
+Once npm and yarn are installed, the following command will install all the required packages for RPG Battle when run in the same folder as the package.json file
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```shell
+yarn install
+```
+<!-- 
+## Developing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Here's a brief intro about what a developer must do in order to start developing
+the project further:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```shell
+git clone https://github.com/your/awesome-project.git
+cd awesome-project/
+packagemanager install
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+And state what happens step-by-step. -->
 
-## Learn More
+### Building
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The build script will build the project for production
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```shell
+yarn build
+```
 
-### Code Splitting
+This builds & minimizes the project according to the creat-react-app deployment.
+For more details read their documentation here: [deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Features
 
-### Analyzing the Bundle Size
+RPG Battle is currently in the early stages of development, currently it can do the following:
+* Generate units in a unit list
+* Add and remove units from a team
+* Save generated units & team locally using local storage
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+<!-- ## Contributing
 
-### Making a Progressive Web App
+When you publish something open source, one of the greatest motivations is that
+anyone can just jump in and start contributing to your project.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+These paragraphs are meant to welcome those kind souls to feel that they are
+needed. You should state something like:
 
-### Advanced Configuration
+"If you'd like to contribute, please fork the repository and use a feature
+branch. Pull requests are warmly welcome."
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+If there's anything else the developer needs to know (e.g. the code style
+guide), you should link it here. If there's a lot of things to take into
+consideration, it is common to separate this section to its own file called
+`CONTRIBUTING.md` (or similar). If so, you should say that it exists here. -->
 
-### Deployment
+## Links
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+- Project homepage: https://github.com/mdpierce91/RPGBattle
+- Repository: https://github.com/mdpierce91/RPGBattle
+- Issue tracker: https://github.com/mdpierce91/RPGBattle/issues
 
-### `yarn build` fails to minify
+## Licensing
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+"The code in this project is licensed under MIT license."
