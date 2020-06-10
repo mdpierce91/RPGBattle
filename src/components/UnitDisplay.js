@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * Displays a units properties.
+ * @param {object} unit - a single unit
+ */
+
 export const UnitDisplay = ({...unit}) => {
     return (
         <div>

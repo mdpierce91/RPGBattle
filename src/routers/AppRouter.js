@@ -12,6 +12,10 @@ import AppContext from '../context/app-context';
 
 export const history = createBrowserHistory();
 
+/**
+ * Handles page routing for the app.
+ * Also contains the LocalStorage logic for units.
+ */
 const AppRouter = () => {
     const [units, unitsDispatch] = useReducer(unitsReducer, [])
     const [team, teamDispatch] = useReducer(teamReducer, [])

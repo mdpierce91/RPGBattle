@@ -1,6 +1,10 @@
 import Unit from './Unit';
 import { v4 as uuidGenerator } from 'uuid';
 
+/**
+ * Generates a number of random units as given by count.
+ * @param {int} count - the number of units to generate.
+ */
 export const getRandomUnits = (count) => {
     // Initialize empty array
     let units = [];
@@ -13,7 +17,11 @@ export const getRandomUnits = (count) => {
     return units;
 }
 
-
+/**
+ * Generates a single random unit.
+ * @param {string} randomizeId - the uuid of this generation set.
+ * @param {int} count - the index of this unit in the generation set.
+ */
 const unitRandomizer = (randomizeId, count) => {
     // Randomize properties
     let props = {
@@ -39,6 +47,9 @@ const unitRandomizer = (randomizeId, count) => {
     return unit;
 }
 
+/**
+ * Generate a type pair, if they are the same, just return a single type.
+ */
 const randomType = () => {
     // Roll two types, numbered between 1-12
     let types = [
@@ -49,6 +60,9 @@ const randomType = () => {
     return types[0] === types[1] ? [types[0]] : types;
 }
 
+/**
+ * Generate a stat using the "roll 4 drop lowest" method.
+ */
 const randomizeStat = () => {
     // Generate 4 numbers
     let values = [
@@ -67,6 +81,10 @@ const randomizeStat = () => {
     }, 0);
 }
 
+/**
+ * Roll a die, the max param detemines the type of die.
+ * @param {int} max - The highest value allowed
+ */
 const rollDice = (max) => {
     return Math.ceil(Math.random()*max);
 }

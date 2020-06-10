@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { startLogout } from '../actions/auth';
 
+/**
+ * The top header bar on the page.
+ * Contains the Settings & Logout buttons.
+ * @param {object} props - The properties pass to Header
+ */
+
 export const Header = ({ startLogout }) => (
     <header className="header">
         <div className="content-container">

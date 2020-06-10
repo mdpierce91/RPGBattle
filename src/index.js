@@ -9,15 +9,19 @@ import './styles/styles.scss';
 import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 
-
+// Get the store
 const store = configureStore();
 
+// Configure the base of the app.
 const jsx = (
 	<Provider store={store}>
 		<AppRouter />
 	</Provider>
 );
 let hasRendered = false;
+/**
+ * Start the app.
+ */
 const renderApp = () => {
 	console.log('start render');
 	if (!hasRendered) {
@@ -27,9 +31,10 @@ const renderApp = () => {
 		console.log('has now rendered');
 	}
 };
-
+// Display the loading page while everything is loading.
 ReactDOM.render(<LoadingPage />, document.getElementById('root'));
 
+// Once firebase has connected, begin the process of starting the app.
 firebase.auth().onAuthStateChanged((user) => {
 	console.log('Auth changed');
 	if (user) {

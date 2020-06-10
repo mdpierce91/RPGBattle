@@ -3,6 +3,10 @@ import TeamBuilder from './TeamBuilder';
 import AppContext from '../context/app-context';
 import { getRandomUnits } from '../models/UnitRandomizer';
 
+/**
+ * Holds the team builder and the buttons to start a game.
+ */
+
 const SetupPage = () => {
     const { unitsDispatch } = useContext(AppContext);
     const createUnit = () => {

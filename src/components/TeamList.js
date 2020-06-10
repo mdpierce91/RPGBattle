@@ -2,6 +2,11 @@ import React, { useContext } from 'react';
 import TeamListItem from './TeamListItem';
 import AppContext from '../context/app-context';
 
+/**
+ * Shows the list of current units in the team.
+ * If it is empty is displays a message.
+ */
+
 export const TeamList = () => {
     const {team} = useContext(AppContext);
     return (

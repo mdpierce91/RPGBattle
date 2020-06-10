@@ -2,6 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { startLogin } from '../actions/auth';
 
+/**
+ * This presents the login buttons to the user.
+ * Currently only allows login with Google.
+ * @param {object} props - Props for the constructor
+ */
 export const LoginPage = ({ startLogin }) => (
     <div className="box-layout">
         <div className="box-layout__box">

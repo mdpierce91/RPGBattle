@@ -2,6 +2,11 @@ import React, { useContext } from 'react';
 import UnitListItem from './UnitListItem';
 import AppContext from '../context/app-context';
 
+/**
+ * Shows the list of currently available units.
+ * If it is empty is displays a message.
+ */
+
 export const UnitList = () => {
     const {units} = useContext(AppContext);
     return (
