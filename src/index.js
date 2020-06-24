@@ -6,7 +6,7 @@ import { login, logout } from './actions/auth';
 import configureStore from './store/configureStore';
 import * as serviceWorker from './serviceWorker';
 import './styles/styles.scss';
-import { firebase } from './firebase/firebase';
+import database, { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 
 // Get the store
@@ -19,6 +19,7 @@ const jsx = (
 	</Provider>
 );
 let hasRendered = false;
+let unitSet = 'default';
 /**
  * Start the app.
  */
@@ -40,16 +41,35 @@ firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
 		console.log('User exists');
 		store.dispatch(login(user.uid));
-		renderApp();
-		if (history.location.pathname === '/') {
-			history.push('/dashboard');
-		}
-		// store.dispatch(startSetExpenses()).then(() => {
-		//     renderApp();
-		//     if (history.location.pathname === '/'){
-		//         history.push('/dashboard');
-		//     }
-		// });
+		database.ref(`units/${unitSet}`).once('value').then((unitsSnapshot) => {
+			console.log('units snapshot: ', unitsSnapshot);
+			let units = [];
+			unitsSnapshot.forEach((childSnapshot) => {
+				console.log(childSnapshot.val());
+				units.push(childSnapshot.val());
+			})
+			console.log('units before dispatch: ', units);
+			store.dispatch({
+				type: 'POPULATE_UNITS',
+				units
+			});
+			console.log(store.getState());
+			database.ref(`users/${user.uid}/team`).once('value').then((teamSnapshot) => {  
+				let team = [];
+				teamSnapshot.forEach((childSnapshot) => {
+					console.log(childSnapshot.val());
+					team.push(childSnapshot.val());
+				})
+				store.dispatch({
+					type: 'POPULATE_TEAM',
+					team
+				});
+				renderApp();
+				if (history.location.pathname === '/'){
+					history.push('/dashboard');
+				}
+			})
+		})
 	} else {
 		console.log('No user');
 		store.dispatch(logout());

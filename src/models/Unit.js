@@ -52,16 +52,16 @@ class Unit {
         
     }
 
-    adjustHitpoints = (adjustValue) => {
-        this.currentHitPoints = Math.min(adjustValue + this.currentHitPoints, this.maxHitPoints);
+    // adjustHitpoints = (adjustValue) => {
+    //     this.currentHitPoints = Math.min(adjustValue + this.currentHitPoints, this.maxHitPoints);
 
-        if (this.currentHitPoints <= 0){
-            this.down();
-        }
-    }
-    down = () => {
-        this.downed = true;
-    }
+    //     if (this.currentHitPoints <= 0){
+    //         this.down();
+    //     }
+    // }
+    // down = () => {
+    //     this.downed = true;
+    // }
 
 }
 

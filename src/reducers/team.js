@@ -1,4 +1,4 @@
-const teamReducer = (state, action) => {
+const teamReducer = (state = [], action) => {
     switch (action.type){
         case 'POPULATE_TEAM':    
             return action.team;
@@ -14,6 +14,7 @@ const teamReducer = (state, action) => {
                 return state;
             }
         case 'REMOVE_FROM_TEAM':
+            console.log(`action id: ${action.id}`)
             return state.filter((unit) => unit.id !== action.id);
         default:
             return state;

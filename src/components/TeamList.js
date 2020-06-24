@@ -1,14 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import TeamListItem from './TeamListItem';
-import AppContext from '../context/app-context';
+import { connect } from 'react-redux';
 
 /**
  * Shows the list of current units in the team.
  * If it is empty is displays a message.
  */
 
-export const TeamList = () => {
-    const {team} = useContext(AppContext);
+export const TeamList = ({ team }) => {
+    // const {team} = useContext(AppContext);
     return (
         <div className="list-container">
             <h2>Team</h2>
@@ -27,4 +27,8 @@ export const TeamList = () => {
     )
 }
 
-export { TeamList as default };
+const mapStateToProps = (state) => ({
+    team: state.team
+});
+
+export default connect(mapStateToProps)(TeamList);

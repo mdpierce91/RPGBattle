@@ -39,7 +39,7 @@ const unitRandomizer = (randomizeId, count) => {
         status: [],
         types: randomType()
     }
-    props.currentHitpoints = props.maxHitPoints;
+    props.currentHitPoints = props.maxHitPoints;
 
     // Create new Unit
     let unit = new Unit(props);
